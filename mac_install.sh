@@ -37,6 +37,9 @@ brew install macvim
 echo "ffmpeg"
 brew install ffmpeg
 
+echo "proguard"
+brew install proguard
+
 echo "flutter"
 brew tap MiderWong/flutter
 brew install flutter
