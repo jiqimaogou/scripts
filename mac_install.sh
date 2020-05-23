@@ -1,0 +1,105 @@
+echo "brew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+echo "oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "iterm2"
+brew cask install iterm2
+
+echo "google-chrome"
+brew cask install google-chrome
+
+echo "gnu"
+brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
+
+echo "bazel"
+brew install bazel
+
+echo "cmake"
+brew install cmake
+
+echo "ninja"
+brew install ninja
+
+echo "node"
+brew install node
+
+echo "opencv@3"
+brew install opencv@3
+
+echo "jadx"
+brew install jadx
+
+echo "macvim"
+brew install macvim
+
+echo "ffmpeg"
+brew install ffmpeg
+
+echo "flutter"
+brew tap MiderWong/flutter
+brew install flutter
+
+echo "mono"
+brew install mono
+
+echo "python"
+brew install python    #安装python
+
+echo "clang-format"
+brew install clang-format
+
+echo "jd-gui"
+brew cask install jd-gui
+
+echo "visual-studio-code"
+brew cask install visual-studio-code
+
+echo "visual-studio"
+brew cask install visual-studio
+
+echo "sublime-text"
+brew cask install sublime-text
+
+echo "android-studio"
+brew cask install android-studio
+
+echo "clion"
+brew cask install clion
+
+echo "pycharm-ce"
+brew cask install pycharm-ce
+
+echo "intellij-idea-ce"
+brew cask install intellij-idea-ce
+
+echo "sourcetree"
+brew cask install sourcetree
+
+echo "appcleaner"
+brew cask install appcleaner
+
+echo "v2rayu"
+brew cask install v2rayu
+
+echo "shadowsocksx-ng-r"
+brew cask install shadowsocksx-ng-r
+
+echo "xmind-zen"
+brew cask install xmind-zen
+
+echo "clashx"
+brew cask install clashx
+
+echo "github"
+brew cask install github
+
+echo "macdown"
+brew cask install macdown
+
+echo "unity"
+brew cask install unity
+
+echo "blender"
+brew cask install blender
