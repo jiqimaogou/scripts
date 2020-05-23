@@ -62,6 +62,9 @@ brew cask install visual-studio
 echo "sublime-text"
 brew cask install sublime-text
 
+echo "dingtalk"
+brew cask install dingtalk
+
 echo "android-studio"
 brew cask install android-studio
 
