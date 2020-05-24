@@ -150,3 +150,9 @@ killall Finder
 sudo spctl --master-disable
 
 defaults write com.apple.screencapture /tmp
+
+chflags nohidden ~/Library/
+
+defaults write com.googlecode.iterm2 HotkeyTermAnimationDuration -float 0.00001
+
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
