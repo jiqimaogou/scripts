@@ -1,8 +1,14 @@
+if ! [ -x "$(command -v brew)" ]; then
 echo "brew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
 
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
 echo "oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 
 echo "iterm2"
 brew cask install iterm2
