@@ -120,7 +120,7 @@ if [[ ! -v ANDROID_HOME ]]; then
     echo "ANDROID_HOME is not set"
 cat <<"EOF" >> ~/.zshrc
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$JAVA_HOME/bin:$PATH
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator       # can't run emulator without it
