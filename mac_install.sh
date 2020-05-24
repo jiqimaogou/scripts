@@ -143,3 +143,10 @@ fi
 source ~/.zshrc
 
 sdkmanager --list | grep -v system-images | awk '{print $1}' | xargs -I {} sdkmanager --install '{}'
+
+defaults write com.apple.Finder AppleShowAllFiles true
+killall Finder
+
+sudo spctl --master-disable
+
+defaults write com.apple.screencapture /tmp
