@@ -179,3 +179,5 @@ echo "flutter"
 brew tap MiderWong/flutter
 brew install flutter
 flutter doctor
+
+brew cask install sogouinput
