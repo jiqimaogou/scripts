@@ -142,6 +142,16 @@ brew cask install unity
 echo "blender"
 brew cask install blender
 
+if [ ! -v ANDROID_HOME ] #note the lack of a $ sigil
+then
+    echo "Variable is unset"
+elif [ -z "$ANDROID_HOME" ]
+then
+    echo "Variable is set to an empty string"
+else
+    echo "Variable is set to some string"
+fi
+
 if [[ ! -v ANDROID_HOME ]]; then
     echo "ANDROID_HOME is not set"
 cat <<"EOF" >> ~/.zshrc
