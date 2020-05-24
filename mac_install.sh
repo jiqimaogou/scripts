@@ -69,11 +69,6 @@ brew install ffmpeg
 echo "proguard"
 brew install proguard
 
-echo "flutter"
-brew tap MiderWong/flutter
-brew install flutter
-flutter doctor
-
 echo "mono"
 brew install mono
 
@@ -179,3 +174,8 @@ chflags nohidden ~/Library/
 defaults write com.googlecode.iterm2 HotkeyTermAnimationDuration -float 0.00001
 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+echo "flutter"
+brew tap MiderWong/flutter
+brew install flutter
+flutter doctor
