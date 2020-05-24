@@ -161,6 +161,7 @@ else
     echo "defined"
 fi
 
+yes | sdkmanager --licenses
 sdkmanager --list | grep -v system-images | awk '{print $1}' | xargs -I {} sdkmanager --install '{}'
 
 defaults write com.apple.Finder AppleShowAllFiles true
