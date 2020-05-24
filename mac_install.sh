@@ -109,3 +109,29 @@ brew cask install unity
 
 echo "blender"
 brew cask install blender
+
+if [[ ! -v ANDROID_HOME ]]; then
+    echo "ANDROID_HOME is not set"
+cat <<"EOF" >> ~/.zshrc
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$JAVA_HOME/bin
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator       # can't run emulator without it
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export ANDROID_SDK_HOME=$HOME/Library/Android/sdk
+export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk-bundle
+export PATH=$ANDROID_NDK_PATH:$PATH
+export PATH=$ANDROID_SDK_HOME/build-tools/26.0.3:$PATH
+EOF
+elif [[ -z "$ANDROID_HOME" ]]; then
+    echo "ANDROID_HOME is set to the empty string"
+else
+    echo "ANDROID_HOME has the value: $ANDROID_HOME"
+fi
+
+source ~/.zshrc
+
+
