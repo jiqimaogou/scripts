@@ -136,4 +136,4 @@ fi
 
 source ~/.zshrc
 
-
+sdkmanager --list | grep -v system-images | awk '{print $1}' | xargs -I {} sdkmanager --install '{}'
