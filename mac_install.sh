@@ -9,6 +9,30 @@ echo "oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# 替换brew.git:
+cd "$(brew --repo)"
+git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+
+# 替换homebrew-core.git:
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
+# 替换homebrew-cask.git:
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-cask"
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+
+# 应用生效
+brew update
+
+if [[ ! -v HOMEBREW_BOTTLE_DOMAIN ]]; then
+    echo "HOMEBREW_BOTTLE_DOMAIN is not set"
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
+elif [[ -z "$HOMEBREW_BOTTLE_DOMAIN" ]]; then
+    echo "HOMEBREW_BOTTLE_DOMAINE is set to the empty string"
+else
+    echo "HOMEBREW_BOTTLE_DOMAIN has the value: $HOMEBREW_BOTTLE_DOMAIN"
+fi
 
 echo "iterm2"
 brew cask install iterm2
@@ -119,6 +143,7 @@ brew cask install blender
 if [[ ! -v ANDROID_HOME ]]; then
     echo "ANDROID_HOME is not set"
 cat <<"EOF" >> ~/.zshrc
+
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH
 
