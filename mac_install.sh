@@ -72,6 +72,7 @@ brew install proguard
 echo "flutter"
 brew tap MiderWong/flutter
 brew install flutter
+flutter doctor
 
 echo "mono"
 brew install mono
