@@ -139,18 +139,9 @@ brew cask install unity
 echo "blender"
 brew cask install blender
 
-if [ ! -v ANDROID_HOME ] #note the lack of a $ sigil
+if [ -z "$ANDROID_HOME" ]
 then
-    echo "Variable is unset"
-elif [ -z "$ANDROID_HOME" ]
-then
-    echo "Variable is set to an empty string"
-else
-    echo "Variable is set to some string"
-fi
-
-if [[ ! -v ANDROID_HOME ]]; then
-    echo "ANDROID_HOME is not set"
+    echo "not defined"
 cat <<"EOF" >> ~/.zshrc
 
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -168,13 +159,10 @@ export PATH=$ANDROID_NDK_HOME:$PATH
 export PATH=$ANDROID_NDK_HOME/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin:$PATH
 export PATH=$ANDROID_SDK_HOME/build-tools/26.0.3:$PATH
 EOF
-elif [[ -z "$ANDROID_HOME" ]]; then
-    echo "ANDROID_HOME is set to the empty string"
-else
-    echo "ANDROID_HOME has the value: $ANDROID_HOME"
-fi
-
 source ~/.zshrc
+else 
+    echo "defined"
+fi
 
 sdkmanager --list | grep -v system-images | awk '{print $1}' | xargs -I {} sdkmanager --install '{}'
 
