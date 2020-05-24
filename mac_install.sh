@@ -131,6 +131,7 @@ brew cask install macdown
 
 echo "unity"
 brew cask install unity
+brew cask install unity-hub
 
 echo "blender"
 brew cask install blender
@@ -181,3 +182,4 @@ brew install flutter
 flutter doctor
 
 brew cask install sogouinput
+brew cask install adobe-acrobat-reader
