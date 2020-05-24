@@ -9,6 +9,9 @@ echo "oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+echo "iterm2"
+brew cask install iterm2
+
 # 替换brew.git:
 cd "$(brew --repo)"
 git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
@@ -32,9 +35,6 @@ source ~/.zshrc
 else 
     echo "defined"
 fi
-
-echo "iterm2"
-brew cask install iterm2
 
 echo "google-chrome"
 brew cask install google-chrome
