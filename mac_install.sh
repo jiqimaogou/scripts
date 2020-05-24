@@ -26,10 +26,8 @@ brew update
 
 if [[ ! -v HOMEBREW_BOTTLE_DOMAIN ]]; then
     echo "HOMEBREW_BOTTLE_DOMAIN is not set"
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
-source ~/.zshrc
 elif [[ -z "$HOMEBREW_BOTTLE_DOMAIN" ]]; then
-    echo "HOMEBREW_BOTTLE_DOMAINE is set to the empty string"
+    echo "HOMEBREW_BOTTLE_DOMAIN is set to the empty string"
 else
     echo "HOMEBREW_BOTTLE_DOMAIN has the value: $HOMEBREW_BOTTLE_DOMAIN"
 fi
