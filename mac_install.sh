@@ -124,6 +124,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ANDROID_SDK_HOME=$HOME/Library/Android/sdk
 export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk-bundle
 export PATH=$ANDROID_NDK_PATH:$PATH
+export PATH=$ANDROID_NDK_PATH/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin:$PATH
 export PATH=$ANDROID_SDK_HOME/build-tools/26.0.3:$PATH
 EOF
 elif [[ -z "$ANDROID_HOME" ]]; then
