@@ -129,7 +129,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export ANDROID_SDK_HOME=$HOME/Library/Android/sdk
-export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk-bundle
+export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk/18.1.5063045
 export PATH=$ANDROID_NDK_PATH:$PATH
 export PATH=$ANDROID_NDK_PATH/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin:$PATH
 export PATH=$ANDROID_SDK_HOME/build-tools/26.0.3:$PATH
