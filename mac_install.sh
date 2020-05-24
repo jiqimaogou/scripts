@@ -24,14 +24,16 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 # 应用生效
 brew update
 
-if [[ ! -v HOMEBREW_BOTTLE_DOMAIN ]]; then
-    echo "HOMEBREW_BOTTLE_DOMAIN is not set"
+if [ ! -v HOMEBREW_BOTTLE_DOMAIN ] #note the lack of a $ sigil
+then
+    echo "Variable is unset"
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 source ~/.zshrc
-elif [[ -z "$HOMEBREW_BOTTLE_DOMAIN" ]]; then
-    echo "HOMEBREW_BOTTLE_DOMAIN is set to the empty string"
+elif [ -z "$HOMEBREW_BOTTLE_DOMAIN" ]
+then
+    echo "Variable is set to an empty string"
 else
-    echo "HOMEBREW_BOTTLE_DOMAIN has the value: $HOMEBREW_BOTTLE_DOMAIN"
+    echo "Variable is set to some string"
 fi
 
 echo "iterm2"
