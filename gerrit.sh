@@ -21,6 +21,8 @@ cd -
 cp /usr/local/etc/nginx/nginx.conf review_site
 cp /usr/local/etc/nginx/mime.types review_site
 
+perl -pi.bak -e 's/listen       8080;/listen       80;/g' review_site/nginx.conf
+
 nginx -c `pwd`/review_site/nginx.conf
 
 nginx -s reload
