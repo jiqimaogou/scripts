@@ -15,6 +15,8 @@ touch passwd
 
 htpasswd -b passwd admin admin
 
+cd -
+
 sh review_site/bin/gerrit.sh start
 
 open http://localhost:8081
