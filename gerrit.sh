@@ -21,7 +21,7 @@ cd -
 cp /usr/local/etc/nginx/nginx.conf review_site
 cp /usr/local/etc/nginx/mime.types review_site
 
-nginx -c `pwd`/review_site/nginx/conf
+nginx -c `pwd`/review_site/nginx.conf
 
 nginx -s reload
 
