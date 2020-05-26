@@ -27,6 +27,7 @@ cp /usr/local/etc/nginx/nginx.conf review_site
 cp /usr/local/etc/nginx/mime.types review_site
 
 perl -pi.bak -e 's/listen       8080;/listen       80;/g' review_site/nginx.conf
+sed -i '' '43,46d' review_site/nginx.conf
 sed -i '' '79i\
       location ^~ / {\
             auth_basic "Restricted";\
