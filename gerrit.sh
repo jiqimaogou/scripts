@@ -19,7 +19,7 @@ perl -pi.bak -e 's/OPENID/HTTP/g' gerrit.config
 
 echo "生成用户名和密码："
 touch passwd
-htpasswd -b passwd admin admin
+htpasswd -b passwd chenzhong.cz admin
 
 cd -
 
