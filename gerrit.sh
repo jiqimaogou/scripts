@@ -32,7 +32,7 @@ sed -i '' '79i\
       location ^~ / {\
             auth_basic "Restricted";\
             auth_basic_user_file  /tmp/review_site/etc/passwd;\
-        	proxy_pass        http://127.0.0.1:8099;\
+        	proxy_pass        http://127.0.0.1:8080;\
         	proxy_set_header  X-Forwarded-For $remote_addr;\
         	proxy_set_header  Host $host;\
       }
@@ -46,4 +46,4 @@ nginx -s reload
 
 sh review_site/bin/gerrit.sh start
 
-open http://localhost:8081
+open http://localhost:80
