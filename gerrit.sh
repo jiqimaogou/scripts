@@ -15,6 +15,7 @@ echo "修改服务登录配置："
 cd review_site/etc
 
 perl -pi.bak -e 's/OPENID/HTTP/g' gerrit.config
+perl -pi.bak -e 's/http:\/\/localhost:8080//http:\/\/gerrit.bmsoft.com/g' gerrit.config
 
 echo "生成用户名和密码："
 touch passwd
