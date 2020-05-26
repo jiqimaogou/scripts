@@ -27,7 +27,6 @@ cp /usr/local/etc/nginx/nginx.conf review_site
 cp /usr/local/etc/nginx/mime.types review_site
 
 perl -pi.bak -e 's/listen       8080;/listen       80;/g' review_site/nginx.conf
-sed -i '' '43,46d' review_site/nginx.conf
 sed -i '' '79i\
       location ^~ / {\
             auth_basic "Restricted";\
@@ -37,6 +36,7 @@ sed -i '' '79i\
         	proxy_set_header  Host $host;\
       }
 ' review_site/nginx.conf
+sed -i '' '43,46d' review_site/nginx.conf
 
 echo "启动nginx配置："
 nginx -c `pwd`/review_site/nginx.conf
