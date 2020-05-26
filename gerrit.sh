@@ -27,6 +27,15 @@ cp /usr/local/etc/nginx/nginx.conf review_site
 cp /usr/local/etc/nginx/mime.types review_site
 
 perl -pi.bak -e 's/listen       8080;/listen       80;/g' review_site/nginx.conf
+sed -i '' '79i\
+      location ^~ / {\n\
+            auth_basic "Restricted";\n\
+            auth_basic_user_file  /tmp/review_site/etc/passwd;\n\
+        	proxy_pass        http://127.0.0.1:8099;\n\
+        	proxy_set_header  X-Forwarded-For $remote_addr;\n\
+        	proxy_set_header  Host $host;\n\
+      }
+' review_site/nginx.conf
 
 echo "启动nginx配置："
 nginx -c `pwd`/review_site/nginx.conf
