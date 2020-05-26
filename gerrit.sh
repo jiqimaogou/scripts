@@ -6,6 +6,8 @@ echo "安装服务："
 echo "nginx"
 brew install nginx
 
+rm -rf review_site
+
 wget -c https://gerrit-releases.storage.googleapis.com/gerrit-3.1.4.war
 
 echo "生成服务目录："
